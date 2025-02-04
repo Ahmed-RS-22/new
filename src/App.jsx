@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import  { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./styles/all.css";
 import Header from "./components/header";
 import IcInfo from "./components/ic-info/ic";
@@ -25,9 +25,8 @@ function App() {
       isUserLoggedIn:JSON.parse(localStorage.getItem("userInfo"))?.isUserLoggedIn || false,
     });
     useEffect(() => {
-      localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      console.log("app");
-      
+      setUserInfo(userInfo)
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));      
     },[userInfo]);
   
   const [isUserLogged, setIsUserLogged] = useState(userInfo?.isUserLoggedIn || false);
