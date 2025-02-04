@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import axios from "axios";
 import {
   User,
@@ -95,8 +95,9 @@ function Profile() {
             Accept: "application/json",
           },
         }
-      );
 
+      );
+      console.log(response);
       console.log("Profile updated successfully");
       setIsEditMode(false);
     } catch (error) {
@@ -366,7 +367,7 @@ function Profile() {
               <div className="form-section">
                 <h3 className="section-title">Contact Information</h3>
                 <p className="section-description">
-                  Manage your account's contact details for notifications
+                  Manage your Account's contact details for notifications
                 </p>
                 <div className="form-grid">
                   <div className="form-group">
