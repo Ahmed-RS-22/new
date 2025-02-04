@@ -1,15 +1,5 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  User,
-  Mail,
-  Phone,
-  Globe2,
-  Languages,
-  Lock,
-  Eye,
-  EyeOff,
-} from "lucide-react";
 import "../styles/index.css";
 function Profile() {
   const [isEditMode, setIsEditMode] = useState(false);
@@ -95,7 +85,6 @@ function Profile() {
             Accept: "application/json",
           },
         }
-
       );
       console.log(response);
       console.log("Profile updated successfully");
@@ -171,7 +160,7 @@ function Profile() {
                 <div className="profile-header">
                   <div className="profile-info">
                     <div className="avatar">
-                      <User />
+                      <i className="fa-solid fa-user"></i>
                     </div>
                     <div className="user-details">
                       <h2 className="user-name">
@@ -211,13 +200,17 @@ function Profile() {
                           }))
                         }
                       />
-                      <Lock className="input-icon" />
+                      <i className="fa-solid fa-lock input-icon"></i>
                       <button
                         type="button"
                         onClick={() => handlePasswordVisibility("current")}
                         className="password-toggle"
                       >
-                        {showPassword.current ? <EyeOff /> : <Eye />}
+                        {showPassword.current ? (
+                          <i className="fa-solid fa-eye"></i>
+                        ) : (
+                          <i className="fa-regular fa-eye-slash"></i>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -234,13 +227,17 @@ function Profile() {
                           }))
                         }
                       />
-                      <Lock className="input-icon" />
+                      <i className="fa-solid fa-lock input-icon"></i>
                       <button
                         type="button"
                         onClick={() => handlePasswordVisibility("new")}
                         className="password-toggle"
                       >
-                        {showPassword.new ? <EyeOff /> : <Eye />}
+                        {showPassword.new ? (
+                          <i className="fa-solid fa-eye"></i>
+                        ) : (
+                          <i className="fa-regular fa-eye-slash"></i>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -257,13 +254,17 @@ function Profile() {
                           }))
                         }
                       />
-                      <Lock className="input-icon" />
+                      <i className="fa-solid fa-lock input-icon"></i>
                       <button
                         type="button"
                         onClick={() => handlePasswordVisibility("confirm")}
                         className="password-toggle"
                       >
-                        {showPassword.confirm ? <EyeOff /> : <Eye />}
+                        {showPassword.confirm ? (
+                          <i className="fa-solid fa-eye"></i>
+                        ) : (
+                          <i className="fa-regular fa-eye-slash"></i>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -286,7 +287,7 @@ function Profile() {
               <div className="profile-header">
                 <div className="profile-info">
                   <div className="avatar">
-                    <User />
+                    <i className="fa-solid fa-user"></i>
                   </div>
                   <div className="user-details">
                     <h2 className="user-name">
@@ -385,7 +386,7 @@ function Profile() {
                           }))
                         }
                       />
-                      <Mail className="input-icon" />
+                      <i className="fa-solid fa-envelope"></i>
                     </div>
                   </div>
                   <div className="form-group">
@@ -403,7 +404,7 @@ function Profile() {
                           }))
                         }
                       />
-                      <Phone className="input-icon" />
+                      <i className="fa-solid fa-phone input-icon"></i>
                     </div>
                   </div>
                 </div>
@@ -429,7 +430,7 @@ function Profile() {
                         <option value="USA">USA</option>
                         <option value="UK">UK</option>
                       </select>
-                      <Globe2 className="input-icon" />
+                      <i className="fa-solid fa-earth-asia input-icon"></i>{" "}
                     </div>
                   </div>
                   <div className="form-group">
@@ -450,7 +451,7 @@ function Profile() {
                         <option value="Arabic">Arabic</option>
                         <option value="French">French</option>
                       </select>
-                      <Languages className="input-icon" />
+                      <i className="fa-solid fa-language input-icon"></i>{" "}
                     </div>
                   </div>
                 </div>

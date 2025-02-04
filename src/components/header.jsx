@@ -276,10 +276,10 @@ const Header = ({ isUserLogged, onLogout }) => {
             <ul className="user-actions">
               <li className="icon icon-1 sp">
                 <span className="count">{count}</span>
-                <i class="fa-regular fa-bookmark"></i>
+                <i className="fa-regular fa-bookmark"></i>
               </li>
               <li className="icon icon-1 dropdown">
-                <i class="fa-solid fa-circle-user" onClick={handleUserMenu}></i>
+                <i className="fa-solid fa-circle-user" onClick={handleUserMenu}></i>
                 {/* user control  */}
                 <div
                   className={`user-control ${
@@ -288,7 +288,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                 >
                   <div className="username">
                     <div className="icon">
-                      <i class="fa-solid fa-circle-user"></i>
+                      <i className="fa-solid fa-circle-user"></i>
                     </div>
                     <div className="user-detailes">
                       <span className="name">
@@ -302,7 +302,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                   <ul className="items">
                     <li className="item">
                       <div className="icon-2">
-                        <i class="fa-solid fa-user-large"></i>
+                        <i className="fa-solid fa-user-large"></i>
                       </div>
                       <Link className="uc-link" to="/profile">
                         account
@@ -310,7 +310,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                     </li>
                     <li className="item">
                       <div className="icon-2">
-                        <i class="fa-regular fa-bookmark"></i>
+                        <i className="fa-regular fa-bookmark"></i>
                       </div>
                       <Link className="uc-link" to="/saved">
                         saved ICs
@@ -318,7 +318,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                     </li>
                     <li className="item">
                       <div className="icon-2">
-                        <i class="fa-solid fa-gear"></i>
+                        <i className="fa-solid fa-gear"></i>
                       </div>
                       <Link className="uc-link" to="/settings">
                         settings
@@ -326,7 +326,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                     </li>
                     <li className="item">
                       <div className="icon-2">
-                        <i class="fa-regular fa-circle-question"></i>
+                        <i className="fa-regular fa-circle-question"></i>
                       </div>
                       <Link className="uc-link" to="/tersms-and-conditions">
                         help center{" "}
@@ -355,7 +355,7 @@ const Header = ({ isUserLogged, onLogout }) => {
                   </div>
                   <div className="log-out" onClick={handlelogout}>
                     <div className="icon-2">
-                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <i className="fa-solid fa-right-from-bracket"></i>
                     </div>
                     log out
                   </div>
